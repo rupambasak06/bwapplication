@@ -1,0 +1,13 @@
+.print-only { display: none; }
+
+@media print {
+  html, body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+  header, footer, aside, nav,
+  .no-print, .hidden { display: none !important; }
+  .print-only { display: block !important; }
+  main { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+  a { color: #000 !important; text-decoration: none !important; }
+  table { page-break-inside: avoid; }
+  .page-break { page-break-before: always; }
+  @page { margin: 15mm; }
+}
